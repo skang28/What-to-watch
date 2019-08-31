@@ -55,7 +55,7 @@ function getImdbResults(movieObjects) {
     // need to extract movietitle from movieresults and add it here
     // use encodeURI component
     console.log(movieObjects);
-    fetch(`http://www.omdbapi.com/?t=${encodeURIComponent(movieObjects.title)}&apikey=${omdbApiKey}`)
+    fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(movieObjects.title)}&apikey=${omdbApiKey}`)
     .then(response => {
         if(response.ok) {
             return response.json();
