@@ -7,17 +7,45 @@
         <link rel="stylesheet" type="text/css" href="index.css">
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="index.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     </head>
 
     <body>
+    <div class="container"></div>
         <header>
-            <form class="itemSearch">
-                <input type="submit">
+            <h1>Looking for something to watch?</h1>
+            <form class='mainForm'>
+                <fieldset>
+                    <label>Select Genre</label>
+                    <select id='genreList'>
+                        <option value='Action'>Action</option>
+                        <option value='Adventure'>Adventure</option>
+                        <option value='Animation'>Animation</option>
+                        <option value='Comedy'>Comedy</option>
+                        <option value='Crime'>Crime</option>
+                        <option value='Documentary'>Documentary</option>
+                        <option value='Drama'>Drama</option>
+                        <option value='Family'>Family</option>
+                        <option value='Fantasy'>Fantasy</option>
+                        <option value='History'>History</option>
+                        <option value='Horror'>Horror</option>
+                        <option value='Music'>Music</option>
+                        <option value='Mystery'>Mystery</option>
+                        <option value='Romance'>Romance</option>
+                        <option value='Science Fiction'>Science Fiction</option>
+                        <option value='TV Movie'>TV Movie</option>
+                        <option value='Thriller'>Thriller</option>
+                        <option value='War'>War</option>
+                        <option value='Western'>Western</option>
+                    </select>
+                    <br><br>
+                    <label class='selectMovieOrTV'><input type='radio' value='Movie' name="media" required>Movie</label>
+                    <label class='selectMovieOrTV'><input type='radio' value='TV Show' name="media" required>TV Show</label>
+                    <br><br>
+                    <input type="submit" value="What should I watch?">
+                </fieldset>
             </form>
         </header>
-
-<!-- append all html to main, form & search results-->
-
         <main></main>
         <p class="errorMessage"></p>
     </body>
