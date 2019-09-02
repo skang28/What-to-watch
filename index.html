@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>What to Watch</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="index.css">
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="index.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather&display=swap" rel="stylesheet">   
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
@@ -16,8 +17,9 @@
             <h1>Looking for something to watch?</h1>
             <form class='mainForm'>
                 <fieldset>
-                    <label>Select Genre</label>
-                    <select id='genreList'>
+                    <div class="rowOne">
+                    <label for="genreList">Select Genre</label>
+                    <select id="genreList">
                         <option value='Action'>Action</option>
                         <option value='Adventure'>Adventure</option>
                         <option value='Animation'>Animation</option>
@@ -38,15 +40,20 @@
                         <option value='War'>War</option>
                         <option value='Western'>Western</option>
                     </select>
+                    </div>
                     <br><br>
-                    <label class='selectMovieOrTV'><input type='radio' value='Movie' name="media" required>Movie</label>
-                    <label class='selectMovieOrTV'><input type='radio' value='TV Show' name="media" required>TV Show</label>
+                    <div class="selectToolbar">
+                        <input type="radio" id="radioMovie" name="radioSelect" value="Movie">
+                        <label for="radioMovie">Movie</label>
+                        <input type="radio" id="radioTv" name="radioSelect" value="TV Show">
+                        <label for="radioTv">TV Show</label>
+                    </div>
                     <br><br>
-                    <input type="submit" value="What should I watch?">
+                    <input class="submitButton" type="submit" value="Show me!">
                 </fieldset>
             </form>
         </header>
-        <main></main>
+        <main class="hidden"></main>
         <p class="errorMessage"></p>
     </body>
 </html>

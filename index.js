@@ -91,20 +91,36 @@ function displayResults(movieObjects,imdbResults) {
     console.log(imdbResults);
     let rottenTitle = movieObjects.title.replace(new RegExp(/ |-/, 'g'), '_').replace(new RegExp(/:|!|\/|\.|/,'g'),'').replace(new RegExp(/&/,'g'),'and').replace(new RegExp(/_+/,'g'),'_').toLowerCase();
     console.log(rottenTitle);
+    if (imdbResults.Type === "movie") {
     $('main').html(`
         <div class="poster"><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2${movieObjects.poster_path}" alt="Poster of movie"></div>
-        <h2>${movieObjects.title}</h2>
-        <h2>${movieObjects.release_date}</h2>
-        <p>${movieObjects.overview}</p>
-        <div class="castInfo">${imdbResults.Actors}</div>
-        <div class="imdbContainer">
-            <p>${imdbResults.imdbRating}</p>
-            <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank">IMDb</a>
+        <div class="textInfo">
+            <h2>${movieObjects.title}</h2>
+            <h3>Release date: ${movieObjects.release_date}</h3>
+            <p class="castInfo">Cast: ${imdbResults.Actors}</p>
+            <p class="overview">${movieObjects.overview}</p>
         </div>
-        <div class="rottenTomatoescontainer">
-            <a href="http:www.rottentomatoes.com/m/${rottenTitle}" target="_blank">RottenTomatoes</a>
+        <div class="rating-links">
+            <p>IMDb Rating: ${imdbResults.imdbRating}</p>
+            <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_2.jpg" alt="IMDb logo"></a>
+            <a href="http:www.rottentomatoes.com/m/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_2.jpg" alt="RottenTomatoes logo"></a>
+        </div>`);
+    }
+    else {
+        $('main').html(`
+        <div class="poster"><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2${movieObjects.poster_path}" alt="Poster of movie"></div>
+        <div class="textInfo">
+            <h2>${movieObjects.title}</h2>
+            <h3>Release date: ${movieObjects.release_date}</h3>
+            <p class="castInfo">Cast: ${imdbResults.Actors}</p>
+            <p class="overview">${movieObjects.overview}</p>
         </div>
-        `)
+        <div class="rating-links">
+            <p>IMDb Rating: ${imdbResults.imdbRating}</p>
+            <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_2.jpg" alt="IMDb logo"></a>
+            <a href="http:www.rottentomatoes.com/tv/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_2.jpg" alt="RottenTomatoes logo"></a>
+        </div>`);  
+    }
 }
 
 function watchForm() {
@@ -119,6 +135,7 @@ function watchForm() {
         else {
             getGenres(getMovieResults);
         }
+        $('main').removeClass("hidden");
     });
 }
 
