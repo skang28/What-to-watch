@@ -99,11 +99,11 @@ function displayResults(movieObjects,imdbResults) {
             <h3>Release date: ${movieObjects.release_date}</h3>
             <p class="castInfo">Cast: ${imdbResults.Actors}</p>
             <p class="overview">${movieObjects.overview}</p>
-        </div>
-        <div class="rating-links">
-            <p>IMDb Rating: ${imdbResults.imdbRating}</p>
-            <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_2.jpg" alt="IMDb logo"></a>
-            <a href="http:www.rottentomatoes.com/m/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_2.jpg" alt="RottenTomatoes logo"></a>
+            <div class="rating-links">
+                <p>IMDb Rating: ${imdbResults.imdbRating}</p>
+                <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_white.jpg" alt="IMDb logo"></a>
+                <a href="http:www.rottentomatoes.com/m/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_white.jpg" alt="RottenTomatoes logo"></a>
+            </div>
         </div>`);
     }
     else {
@@ -114,12 +114,12 @@ function displayResults(movieObjects,imdbResults) {
             <h3>Release date: ${movieObjects.release_date}</h3>
             <p class="castInfo">Cast: ${imdbResults.Actors}</p>
             <p class="overview">${movieObjects.overview}</p>
-        </div>
-        <div class="rating-links">
-            <p>IMDb Rating: ${imdbResults.imdbRating}</p>
-            <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_2.jpg" alt="IMDb logo"></a>
-            <a href="http:www.rottentomatoes.com/tv/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_2.jpg" alt="RottenTomatoes logo"></a>
-        </div>`);  
+            <div class="rating-links">
+                <p>IMDb Rating: ${imdbResults.imdbRating}</p>
+                <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_white.jpg" alt="IMDb logo"></a>
+                <a href="http:www.rottentomatoes.com/tv/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_white.jpg" alt="RottenTomatoes logo"></a>
+            </div>
+        </div>`);
     }
 }
 

@@ -7,17 +7,20 @@
 body {
     min-width: 100%;
     min-height: 100%;
-    background: url('background_pic_logo_4.png');
+    background: url('background_pic_logo_1.png');
     background-repeat: no-repeat;
-    background-position: left 10em;
+    background-position: left 5em;
     background-color: #FBBA00;
+}
+
+h1, option, input, .submitButton, form, select {
+    font-family: 'Alegreya', serif;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     margin-top: 2em;
-    font-family: 'Lato', sans-serif;
     font-weight: bold;
     color: black;
     font-size: 3em;
@@ -29,7 +32,6 @@ form {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Lato', sans-serif;
     height: 15em;
     text-align: center;
     margin-bottom: 5em;
@@ -43,12 +45,12 @@ select#genreList {
     -webkit-padding-end: 20px;
     -webkit-padding-start: 2px;
     -webkit-user-select: none;
-    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0) 40%, rgb(0, 0, 0));
     background-position: 97% center;
     background-repeat: no-repeat;
     border: 1px solid #AAA;
-    border-radius: 0.5em;
-    color: #555;
+    border-radius: 0.2em;
+    color: white;
     font-size: inherit;
     margin-left: 1em;
     margin-bottom: 1em;
@@ -56,11 +58,14 @@ select#genreList {
     padding: 0.4em;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 300px;
+    width: 10em;
+    font-weight: bold;
  }
 
-option, input {
-    font-family: 'Lato', sans-serif;
+option {
+    font-weight: bold;
+    background-color: black;
+    color: white;
 }
 
 label {
@@ -71,6 +76,8 @@ label {
 
 label[for="genreList"] {
     color: black;
+    font-size: 1.5em;
+    padding-top: 0.3em;
 }
 
 .rowOne {
@@ -89,13 +96,6 @@ select {
     margin-top: 0.3em;
 }
 
-.form-radio {
-    cursor: pointer;
-    height: 1.5em;
-    width: 1.5em;
-    display: none;
-}
-
 .selectToolbar input[type="radio"] {
     opacity: 0;
     width: 0;
@@ -104,15 +104,23 @@ select {
 
 .selectToolbar label {
     display: inline-block;
-    background-color: #8C5523;
+    background-color: black;
     border: 0.1em solid #444;
-    border-radius: 0.5em;
-    padding: 0.3em;
+    border-radius: 0.2em;
+    padding: 0.5em;
     font-size: 1.2em;
+    width: 8em;
+    margin-right: 2.5em;
+    margin-left: 2.5em;
+    transition-property: background, border-radius;
+    transition-duration: .1s, .1s;
+    transition-timing-function: linear, ease-in;
+    transition-delay: 0s, 0s;
 }
 
 .selectToolbar label:hover {
-    background-color: rgba(23, 24, 23, 0.664);
+    background-color: #59491B;
+    border-radius: 1em;
 }
 
 .selectToolbar input[type="radio"]:focus + label {
@@ -120,22 +128,30 @@ select {
 }
 
 .selectToolbar input[type="radio"]:checked + label {
-    background-color: #73020C;
+    background-color: rgb(13, 2, 75);
     border-color: black;
 }
 .submitButton {
-    font-family: 'Lato', sans-serif;
     font-weight: bold;
     padding: 0.3em 1.8em;
-    font-size: 2em;
-    border-radius: 0.5em;
+    font-size: 1.8em;
+    border-radius: 0.2em;
     border: none;
-    background-color: #001F8C;
+    background-color: black;
     color: white;
+    transition-property: background, border-radius;
+    transition-duration: .1s, .1s;
+    transition-timing-function: linear, ease-in;
+    transition-delay: 0s, 0s;
 }
 
 .submitButton:hover {
     background-color: rgba(23, 24, 23, 0.664);
+    border-radius: 1em;
+}
+
+.submitButton:focus {
+    background-color: #8C1B11;
 }
 
 fieldset {
@@ -144,7 +160,6 @@ fieldset {
 }
 
 main {
-    width: 80%;
     height: 20em;
     margin-left: auto;
     margin-right: auto;
@@ -158,15 +173,15 @@ main {
 .poster img {
     float: left;
     margin-right: 1em;
-    padding-left: 10em;
+    padding-left: 15em;
 }
 
 h2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.3em;
 }
 
 h3 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1.2em;
 }
 
 p {
@@ -177,14 +192,27 @@ p {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 30em;
-    padding-right: 5em;
+    padding-left: 2em;
 }
 
 
 p,h2,h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: black;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+.textInfo p {
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 a {
@@ -192,7 +220,9 @@ a {
 }
 
 .textInfo {
-    padding-right: 20em;
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .castInfo {
@@ -203,8 +233,9 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2em;
-    margin-right: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.2em;
 }
 
 .rating-links img {
@@ -215,4 +246,353 @@ a {
 
 .rating-links p {
     font-weight: bold;
+    margin-top: 0.7em;
+}
+
+.errorMessage {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1500px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_3.png');
+        background-repeat: no-repeat;
+        background-position: left 5em;
+        background-color: #FBBA00;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .textInfo {
+        width: 55%;
+    }
+
+    .textInfo p {
+        font-size: 1.2em;
+    }
+
+    .overview {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_2.png');
+        background-repeat: no-repeat;
+        background-position: left 5em;
+        background-color: #FBBA00;
+    }
+
+    .textInfo {
+        width: 45%;
+    }
+
+    .textInfo p {
+        font-size: 1.2em;
+    }
+
+    .overview {
+        text-align: left;
+    }
+
+    .poster img {
+        padding-left: 10em;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_4.png');
+        background-repeat: no-repeat;
+        background-position: left 5em;
+        background-color: #FBBA00;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .selectToolbar {
+        font-size: 0.9em;
+    }
+
+    .submitButton {
+        font-size: 1.5em;
+    }
+
+    label[for="genreList"] {
+        font-size: 1.5em;
+    }
+
+    select#genreList {
+        font-size: 1em;
+    }
+
+    .textInfo {
+        width: 70%;
+    }
+
+    .overview {
+        text-align: left;
+    }
+
+    .poster img {
+        padding-left: 8em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_5.png');
+        background-repeat: no-repeat;
+        background-position: left 10em;
+        background-color: #FBBA00;
+    }    
+
+    label[for="genreList"] {
+        padding-bottom: 0.3em;
+        padding-top: 0em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .selectToolbar {
+        font-size: 0.7em;
+    }
+
+    .submitButton {
+        font-size: 1.3em;
+    }
+
+    label[for="genreList"] {
+        font-size: 1.4em;
+    }
+
+    select#genreList {
+        font-size: 0.8em;
+    }
+
+    .textInfo {
+        width: 70%;
+    }
+
+    .textInfo p {
+        font-size: 1em;
+    }
+
+    .overview{
+        text-align: left;
+    }
+
+    .poster img {
+        width: 35%;
+        height: 45%;
+    }
+
+    .rating-links img {
+        width: 4em;
+        height: 2em;
+        border-radius: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .selectToolbar {
+        font-size: 0.6em;
+    }
+
+    .submitButton {
+        font-size: 1.1em;
+    }
+
+    label[for="genreList"] {
+        font-size: 1.1em;
+        padding-top: 0.2em;
+    }
+
+    select#genreList {
+        font-size: 0.7em;
+    }
+
+    .textInfo {
+        width: 90%;
+    }
+
+    .textInfo p {
+        font-size: 0.8em;
+    }
+
+    .poster img {
+        padding-left: 2em;
+        width: 30%;
+        height: 50%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_6.png');
+        background-repeat: no-repeat;
+        background-position: left 8em;
+        background-color: #FBBA00;
+    }    
+
+    h1 {
+        font-size: 1.8em;
+    }
+    .selectToolbar label {
+        font-size: 0.9em;
+    }
+
+    .submitButton {
+        font-size: 1em;
+    }
+
+    label[for="genreList"] {
+        font-size: 1.1em;
+        padding-top: 0.2em;
+    }
+
+    select#genreList {
+        font-size: 0.6em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    .textInfo p {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_6.png');
+        background-repeat: no-repeat;
+        background-position: left 5em;
+        background-color: #FBBA00;
+    } 
+
+    form {
+        height: 7em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .selectToolbar {
+        font-size: 0.5em;
+    }
+
+    .submitButton {
+        font-size: 0.7em;
+    }
+
+    label[for="genreList"] {
+        font-size: 0.8em;
+        padding-top: 0.2em;
+    }
+
+    select#genreList {
+        font-size: 0.5em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    h3 {
+        font-size: 0.8em;
+    }
+
+    .textInfo p {
+        font-size:0.6em;
+    }
+
+    .rating-links img {
+        width: 3em;
+        height: 1.5em;
+        border-radius: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        background: url('background_pic_logo_7.png');
+        background-repeat: no-repeat;
+        background-position: left 5em;
+        background-color: #FBBA00;
+    }   
+
+    .submitButton {
+        font-size: 0.7em;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .selectToolbar {
+        font-size: 0.4em;
+    }
+
+    .submitButton {
+        font-size: 0.6em;
+    }
+
+    label[for="genreList"] {
+        font-size: 0.8em;
+        padding-top: 0.1em;
+    }
+
+    select#genreList {
+        font-size: 0.4em;
+    }
+
+    .rating-links img {
+        width: 2.5em;
+        height: 1em;
+        border-radius: 0.5em;
+    }
 }
