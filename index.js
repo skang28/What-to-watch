@@ -96,33 +96,33 @@ function displayResults(movieObjects,imdbResults) {
     console.log(rottenTitle);
     if (imdbResults.Type === "movie") {
     $('main').html(`
-        <div class="poster"><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2${movieObjects.poster_path}" alt="Poster of movie"></div>
-        <div class="textInfo">
+        <section class="poster"><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2${movieObjects.poster_path}" alt="Poster of movie"></section>
+        <section class="textInfo">
             <h2>${movieObjects.title}</h2>
             <h3>Release date: ${movieObjects.release_date}</h3>
             <p class="castInfo">Cast: ${imdbResults.Actors}</p>
             <p class="overview">${movieObjects.overview}</p>
-            <div class="rating-links">
+            <section class="rating-links">
                 <p>IMDb Rating: ${imdbResults.imdbRating}</p>
                 <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_white.jpg" alt="IMDb logo"></a>
                 <a href="http:www.rottentomatoes.com/m/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_white.jpg" alt="RottenTomatoes logo"></a>
-            </div>
-        </div>`);
+            </section>
+        </section>`);
     }
     else {
         $('main').html(`
-        <div class="poster"><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2${movieObjects.poster_path}" alt="Poster of movie"></div>
-        <div class="textInfo">
+        <section class="poster"><img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2${movieObjects.poster_path}" alt="Poster of movie"></section>
+        <section class="textInfo">
             <h2>${movieObjects.title}</h2>
             <h3>Release date: ${movieObjects.release_date}</h3>
             <p class="castInfo">Cast: ${imdbResults.Actors}</p>
             <p class="overview">${movieObjects.overview}</p>
-            <div class="rating-links">
+            <section class="rating-links">
                 <p>IMDb Rating: ${imdbResults.imdbRating}</p>
                 <a href="http://www.imdb.com/title/${imdbResults.imdbID}" target="_blank"><img src="imdb_logo_white.jpg" alt="IMDb logo"></a>
                 <a href="http:www.rottentomatoes.com/tv/${rottenTitle}" target="_blank"><img src="rottentomatoes_logo_white.jpg" alt="RottenTomatoes logo"></a>
-            </div>
-        </div>`);
+            </section>
+        </section>`);
     }
 }
 
