@@ -19,11 +19,16 @@ h1, option, input, .submitButton, form, select {
 
 h1 {
     text-align: center;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.2em;
     margin-top: 2em;
     font-weight: bold;
     color: black;
     font-size: 3em;
+}
+
+header h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
 }
 
 form {
@@ -39,13 +44,10 @@ form {
 }
 
 select#genreList {
-    /*-webkit-appearance: button;*/
     -webkit-border-radius: 2px;
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     -webkit-padding-end: 20px;
     -webkit-padding-start: 2px;
     -webkit-user-select: none;
-    /*background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0) 40%, rgb(0, 0, 0));*/
     background-color: black;
     background-position: 97% center;
     background-repeat: no-repeat;
@@ -110,7 +112,7 @@ select {
     border-radius: 0.2em;
     padding: 0.5em;
     font-size: 1.2em;
-    width: 8em;
+    width: 12em;
     margin-right: 2.5em;
     margin-left: 2.5em;
     transition-property: background, border-radius;
@@ -417,6 +419,10 @@ a {
 @media only screen and (max-width: 630px) {
     h1 {
         font-size: 2em;
+    }
+
+    form {
+        width: 80%;
     }
 
     .selectToolbar {

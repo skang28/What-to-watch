@@ -128,7 +128,7 @@ function displayResults(movieObjects,imdbResults) {
 
 // grabs genre and movie or TV show selection for API requests and calls relevant functions
 function watchForm() {
-    $('form').submit(event => {
+    $('input[type="radio"]').click(event => {
         event.preventDefault(); 
         let selectGenre = $('select').val();
         genreStore.selectGenre = selectGenre;   
